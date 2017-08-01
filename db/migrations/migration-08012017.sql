@@ -1,5 +1,3 @@
-\c facts_gen_dev
-
 CREATE TABLE IF NOT EXISTS users(
   id SERIAL PRIMARY KEY,
   firstname VARCHAR(255),
