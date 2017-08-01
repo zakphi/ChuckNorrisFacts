@@ -40,6 +40,9 @@ app.get('/', (req, res) => {
   })
 })
 
+const authRoutes = require('./routes/auth')
+app.use('/auth', authRoutes)
+
 app.get('*', (req, res) => {
   res.status(404).send('404 not found')
 })
