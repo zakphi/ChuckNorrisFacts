@@ -6,13 +6,15 @@ const usersController = require('../controllers/users')
 
 authRouter.get('/login', authHelper.loginRedirect, (req, res) => {
   res.render('auth/login', {
-    currentPage: 'login'
+    currentPage: 'login',
+    user: req.user
   })
 })
 
 authRouter.get('/register', authHelper.loginRedirect, (req, res) => {
   res.render('auth/register', {
-    currentPage: 'register'
+    currentPage: 'register',
+    user: req.user
   })
 })
 

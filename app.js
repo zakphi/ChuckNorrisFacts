@@ -37,6 +37,7 @@ app.get('/', (req, res) => {
   res.render('index', {
     currentPage: 'index',
     pageTitle: 'Chuck Norris facts',
+    user: req.user
   })
 })
 
