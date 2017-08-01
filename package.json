@@ -1,0 +1,27 @@
+{
+  "name": "norrisfacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakphi/NorrisFacts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zakphi/NorrisFacts/issues"
+  },
+  "homepage": "https://github.com/zakphi/NorrisFacts#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+    "pg-promise": "^6.3.6"
+  }
+}
