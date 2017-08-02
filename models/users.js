@@ -18,4 +18,11 @@ User.create = user => {
   `, [user.firstname, user.lastname, user.email, user.username, user.password_digest])
 }
 
+User.findUserSavedFacts = id => {
+  return db.manyOrNone(`
+    SELECT * FROM fav_facts
+    WHERE user_id = $1
+  `, [id])
+}
+
 module.exports = User

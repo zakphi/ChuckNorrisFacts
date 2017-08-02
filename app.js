@@ -47,6 +47,9 @@ app.use('/', factsRoutes)
 const authRoutes = require('./routes/auth')
 app.use('/auth', authRoutes)
 
+const usersRoutes = require('./routes/users')
+app.use('/profile', usersRoutes)
+
 app.get('*', (req, res) => {
   res.status(404).send('404 not found')
 })

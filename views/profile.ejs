@@ -1,0 +1,9 @@
+<% include ./partials/header %>
+
+<h1><%= user_name %>'s Favorite Chuck Norris Facts</h1>
+
+<% for(fact of data) { %>
+  <p><%= fact.fact_value %></p>
+<% } %>
+
+<% include ./partials/footer %>

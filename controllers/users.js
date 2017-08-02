@@ -26,4 +26,20 @@ usersController.create = (req, res) => {
     })
 }
 
+usersController.index = (req, res) => {
+  User.findUserSavedFacts(req.user.id)
+    .then(fact => {
+      res.render('profile', {
+        currentPage: 'profile',
+        user: req.user,
+        user_name: req.user.username,
+        data: fact
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({error: err})
+    })
+}
+
 module.exports = usersController
