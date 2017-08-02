@@ -8,7 +8,7 @@ $(() => {
   $('#generate_fact').click(() => {
     console.log('generated random fact')
     $.ajax({
-      url: 'http://api.icndb.com/jokes/random/?escape=javascript',
+      url: 'https://api.icndb.com/jokes/random/?escape=javascript',
       method: 'GET',
       success: (data) => {
         fact.fact = data.value.joke
