@@ -3,16 +3,20 @@ $(() => {
 
   const fact = {}
 
+  $('#save_fact').attr('disabled', true)
+
   $('#generate_fact').click(() => {
     console.log('generated random fact')
     $.ajax({
-      url: 'https://api.chucknorris.io/jokes/random',
+      url: 'http://api.icndb.com/jokes/random/?escape=javascript',
       method: 'GET',
       success: (data) => {
-        console.log(data)
-        $('section p').text(fact.fact = data.value)
+        fact.fact = data.value.joke
+        console.log(fact.fact)
+        $('section p').text(fact.fact)
       }
     })
+    $('#save_fact').attr('disabled', false)
   })
 
   $('#save_fact').click(() => {
@@ -25,6 +29,8 @@ $(() => {
     }).done(data => {
       window.location = '/'
     })
+
+    $('#save_fact').attr('disabled', true)
   })
   
 })
