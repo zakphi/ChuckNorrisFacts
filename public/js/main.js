@@ -17,6 +17,14 @@ $(() => {
 
   $('#save_fact').click(() => {
     console.log('fact saved')
+
+    $.ajax({
+      url: '/',
+      method: 'POST',
+      data: fact
+    }).done(data => {
+      window.location = '/'
+    })
   })
   
 })
