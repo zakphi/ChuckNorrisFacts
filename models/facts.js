@@ -11,4 +11,11 @@ Fact.create = (fact, userid) => {
   `, [fact.fact, userid])
 }
 
+Fact.destroy = (id) => {
+  return db.none(`
+    DELETE FROM fav_facts
+    WHERE id = $1
+  `, [id])
+}
+
 module.exports = Fact

@@ -9,4 +9,15 @@ factsController.create = (req, res) => {
   })
 }
 
+factsController.delete = (req, res) => {
+  Fact.destroy(req.params.id)
+    .then(() => {
+      res.redirect('/profile')
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json(err)
+    })
+}
+
 module.exports = factsController
