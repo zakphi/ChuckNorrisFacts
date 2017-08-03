@@ -1,3 +1,5 @@
+\c facts_gen_dev
+
 CREATE TABLE IF NOT EXISTS users(
   id SERIAL PRIMARY KEY,
   firstname VARCHAR(255),
@@ -10,6 +12,5 @@ CREATE TABLE IF NOT EXISTS users(
 CREATE TABLE IF NOT EXISTS fav_facts(
   id SERIAL PRIMARY KEY,
   fact_value TEXT,
-  fact_id VARCHAR(255),
   user_id INTEGER REFERENCES users(id)
 );
