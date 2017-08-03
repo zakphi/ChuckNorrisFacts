@@ -33,7 +33,7 @@ usersController.index = (req, res) => {
         currentPage: 'profile',
         user: req.user,
         user_name: req.user.username,
-        data: fact
+        facts: fact
       })
     })
     .catch(err => {
