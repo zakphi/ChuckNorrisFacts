@@ -3,8 +3,6 @@ $(() => {
 
   const fact = {}
 
-  $('#save_fact').attr('disabled', true)
-
   $('#generate_fact').click(() => {
     console.log('generated random fact')
     $.ajax({
@@ -14,12 +12,15 @@ $(() => {
         fact.fact = data.value.joke
         console.log(fact.fact)
         $('section p').text(fact.fact)
+        if($('section p').text() !== ''){
+          $('span').html("<button id='save_fact'>save fact</button>")
+        }
       }
     })
     $('#save_fact').attr('disabled', false)
   })
 
-  $('#save_fact').click(() => {
+  $(document).on("click", "#save_fact", function(){
     console.log('fact saved')
 
     $.ajax({
@@ -29,6 +30,6 @@ $(() => {
     })
 
     $('#save_fact').attr('disabled', true)
-  })
+  });
   
 })
