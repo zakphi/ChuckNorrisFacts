@@ -3,7 +3,6 @@
 <h1><%= user_name %>'s Favorite Chuck Norris Facts</h1>
 
 <% for(fact of facts) { %>
-  <%= fact.id %>
   <p><%= fact.fact_value %></p>
   <form method='POST' action='/<%= fact.id %>?_method=DELETE'>
     <input type='submit' value='Delete' />
