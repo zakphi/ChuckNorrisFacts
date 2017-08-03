@@ -26,8 +26,6 @@ $(() => {
       url: '/',
       method: 'POST',
       data: fact
-    }).done(data => {
-      window.location = '/'
     })
 
     $('#save_fact').attr('disabled', true)
