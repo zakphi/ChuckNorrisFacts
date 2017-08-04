@@ -5,7 +5,7 @@
 <% for(fact of facts) { %>
   <p><%= fact.fact_value %></p>
   <form method='POST' action='/<%= fact.id %>?_method=DELETE'>
-    <button type='submit'>Delete</button>
+    <button type='submit'>delete</button>
   </form>
 <% } %>
 
