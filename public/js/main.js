@@ -3,14 +3,38 @@ $(() => {
 
   const fact = {}
 
-  $('#generate_fact').click(() => {
-    console.log('generated random fact')
+  $('#generate_fact').attr('disabled', true)
+
+  $('#fact_gen input').on('change', () => {
+    $('#generate_fact').attr('disabled', false)
+  })
+
+  $('#generate_fact').click((e) => {
+    e.preventDefault()
+
+    let fact_type = $('input[name=fact_type]:checked').val()
+
+    let url = ''
+
+    switch(fact_type){
+      case 'random':
+        url = 'https://api.icndb.com/jokes/random/?escape=javascript'
+        break
+      case 'general':
+        url = 'https://api.icndb.com/jokes/random/?escape=javascript&exclude=[nerdy, explicit]'
+        break
+      case 'nerdy':
+        url = 'https://api.icndb.com/jokes/random/?escape=javascript&limitTo=[nerdy]'
+        break
+      case 'explicit':
+        url = 'https://api.icndb.com/jokes/random/?escape=javascript&limitTo=[explicit]'
+    }
+
     $.ajax({
-      url: 'https://api.icndb.com/jokes/random/?escape=javascript',
+      url: url,
       method: 'GET',
       success: (data) => {
         fact.fact = data.value.joke
-        console.log(fact.fact)
         $('section p').text(fact.fact)
         if($('section p').text() !== ''){
           $('span').html("<button id='save_fact'>save fact</button>")
