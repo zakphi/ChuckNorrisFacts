@@ -41,7 +41,7 @@ When on the home screen, a user can click on a button to generate a random Chuck
 * user can select a fact category
 
 ## Links and Resources
-[chuck norris api](https://api.chucknorris.io/)
+[chuck norris api](http://www.icndb.com/api/)
 
 ## Notes
 ignore the fact_url column in the favFacts table. there's no need for me to save the fact's url.
