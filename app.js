@@ -36,7 +36,7 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
   res.render('index', {
     currentPage: 'index',
-    pageTitle: 'Chuck Norris facts',
+    pageTitle: 'Chuck Norris Facts',
     user: req.user
   })
 })
