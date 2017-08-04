@@ -5,7 +5,7 @@ $(() => {
 
   $('#generate_fact').attr('disabled', true)
 
-  $('#fact_gen input').on('change', () => {
+  $('.index form input').on('change', () => {
     $('#generate_fact').attr('disabled', false)
   })
 
