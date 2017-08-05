@@ -2,11 +2,15 @@
 
 <h1><%= user_name %>'s Favorite Chuck Norris Facts</h1>
 
-<% for(fact of facts) { %>
-  <p><%= fact.fact_value %></p>
-  <form method='POST' action='/<%= fact.id %>?_method=DELETE'>
-    <button type='submit'>delete</button>
-  </form>
-<% } %>
+<section>
+  <% for(fact of facts) { %>
+    <article class='fact'>
+      <p><%= fact.fact_value %></p>
+      <form method='POST' action='/<%= fact.id %>?_method=DELETE'>
+        <button type='submit'>delete</button>
+      </form>
+    </article>
+  <% } %>
+</section>
 
 <% include ./partials/footer %>
