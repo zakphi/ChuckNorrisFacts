@@ -6,6 +6,7 @@ body{
   background-position: center center;
   position: relative;
   z-index: -10;
+  background-attachment: fixed
 }
 
 body, button{
@@ -52,6 +53,7 @@ a, h1, button, p, label{
 p{
   width: 90%;
   margin: 0 auto;
+  font-size: 1.5em;
 }
 
 input, button {
@@ -88,7 +90,7 @@ label{
   height: 100vh;
   background-color: rgba(0,0,0,.37);
   z-index: -5;
-  position: absolute;
+  position: fixed;
 }
 
 button:disabled{
@@ -96,7 +98,7 @@ button:disabled{
 }
 
 h1{
-  font-size: 2em;
+  font-size: 3em;
 }
 
 nav a:nth-child(2){
