@@ -3,15 +3,15 @@ $(() => {
 
   const fact = {}
 
-  $('#generate_fact').attr('disabled', true)
-
-  $('.index form input').on('change', () => {
-    $('#generate_fact').attr('disabled', false)
+  $('#fact_types input').on('change', () => {
+    $('#fact_types span').html('<button>')
+    let $gen_fact_btn = $('#fact_types span button')
+    $gen_fact_btn.attr('type', 'submit')
+    $gen_fact_btn.attr('id', 'generate_fact')
+    $gen_fact_btn.text('click me for a fact')
   })
 
-  $('#generate_fact').click((e) => {
-    e.preventDefault()
-
+  $(document).on('click', '#generate_fact', () => {
     let fact_type = $('input[name=fact_type]:checked').val()
 
     let url = ''
@@ -30,21 +30,22 @@ $(() => {
         url = 'https://api.icndb.com/jokes/random/?escape=javascript&limitTo=[explicit]'
     }
 
-    $.ajax({
-      url: url,
-      method: 'GET',
-      success: (data) => {
+    fetch(url)
+      .then(fetchRes => fetchRes.json())
+      .then((data) => {
         fact.fact = data.value.joke
-        $('section p').text(fact.fact)
-        if($('section p').text() !== ''){
-          $('span').html("<button id='save_fact'>save fact</button>")
+        $('#fact p').text(fact.fact)
+        if($('#fact p').text() !== ''){
+          $('#fact span').html('<button>')
+          let $save_fact_btn = $('#fact span button')
+          $save_fact_btn.attr('id', 'save_fact')
+          $save_fact_btn.text('save fact')
         }
-      }
-    })
-    $('#save_fact').attr('disabled', false)
+        $('#save_fact').attr('disabled', false)
+      })
   })
 
-  $(document).on("click", "#save_fact", function(){
+  $(document).on("click", "#save_fact", () => {
     console.log('fact saved')
 
     $.ajax({

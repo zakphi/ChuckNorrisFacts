@@ -1,15 +1,16 @@
 <% include ./partials/header %>
 
 <h1><%= pageTitle %></h1>
-<form>
-  <input type='radio' name='fact_type' value='random' required><label for='random'>random</label>
-  <input type='radio' name='fact_type' value='general' required><label for='general'>general</label>
-  <input type='radio' name='fact_type' value='nerdy' required><label for='nerdy'>nerdy</label>
-  <input type='radio' name='fact_type' value='explicit' required><label for='explicit'>explicit</label>
-  <button type='submit' id='generate_fact'>click me for a fact</button>
-</form>
 
-<section>
+<section id='fact_types'>
+  <input type='radio' name='fact_type' value='random' id='random'><label for='random'>random</label>
+  <input type='radio' name='fact_type' value='general' id='general'><label for='general'>general</label>
+  <input type='radio' name='fact_type' value='nerdy' id='nerdy'><label for='nerdy'>nerdy</label>
+  <input type='radio' name='fact_type' value='explicit' id='explicit'><label for='explicit'>explicit</label>
+  <span></span>
+</section>
+
+<section id='fact'>
   <p></p>
   <% if(user) { %>
     <span></span>
