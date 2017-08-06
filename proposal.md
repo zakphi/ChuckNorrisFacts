@@ -1,10 +1,10 @@
 *** Philip Zak / 7.31.17 ***
 
-# Norris Facts Proposal
+# Chuck Norris Facts Proposal
 
 ## What is Norris Facts?
 
-Norris Facts is a simple app that will generate a random fact about Chuck Norris.
+Chuck Norris Facts is a simple app that will generate a random fact about Chuck Norris.
 
 ## Wireframe
 
@@ -27,7 +27,6 @@ When on the home screen, a user can click on a button to generate a random Chuck
 ### Phase 1
 * get a random fact from the api
 * display the random fact
-* display a link to the random fact, so users can share the fact
 
 ### Phase 2
 * user can sign up for an account
