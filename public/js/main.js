@@ -28,6 +28,7 @@ $(() => {
         break
       case 'explicit':
         url = 'https://api.icndb.com/jokes/random/?escape=javascript&limitTo=[explicit]'
+        break
     }
 
     fetch(url)
