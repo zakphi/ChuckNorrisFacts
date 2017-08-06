@@ -23,6 +23,9 @@ Chuck Norris Facts is a simple app that will generate a random fact about Chuck 
 ### Notes on App Structure
 
 #### Code Samples
+
+using the api to get data based on the category the user picked
+
 ```
 let fact_type = $('input[name=fact_type]:checked').val()
 
@@ -40,7 +43,8 @@ switch(fact_type){
     break
   case 'explicit':
     url = 'https://api.icndb.com/jokes/random/?escape=javascript&limitTo=[explicit]'
-    }
+    break
+}
 
 fetch(url)
   .then(fetchRes => fetchRes.json())
