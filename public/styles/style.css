@@ -2,7 +2,7 @@ body{
   background-image: url('../images/chuck.png');
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   position: relative;
   z-index: -10;
@@ -14,6 +14,7 @@ body, button{
 }
 
 header, main{
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
@@ -50,10 +51,10 @@ a, h1, button, p, label{
   letter-spacing: 2px;
 }
 
-p{
+.index p{
   width: 90%;
   margin: 0 auto;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 input, button {
@@ -70,14 +71,22 @@ input, button {
 }
 
 #fact_types button{
-  display: block;
   margin: 0 auto;
   margin-top: 10px;
 }
 
+#fact_types span{
+  display: block;
+}
+
 label{
-  padding-left: 2px;
-  margin-right: 5px;
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+label:nth-child(n+3){
+  padding-top: 4px;
 }
 
 .login form input, .register form input{
@@ -98,7 +107,7 @@ button:disabled{
 }
 
 h1{
-  font-size: 3em;
+  font-size: 2em;
 }
 
 nav a:nth-child(2){
@@ -126,4 +135,24 @@ section article:first-child{
 
 .profile article button{
   margin-top: 5px;
+}
+
+@media screen and (min-width: 360px){
+  label{
+    display: inline-block;
+    width: 40%;
+    float: none;
+  }
+}
+
+@media screen and (min-width: 768px){
+  h1{
+    font-size: 3em;
+  }
+  p{
+    font-size: 1.5em;
+  }
+  label{
+    width: initial;
+  }
 }
