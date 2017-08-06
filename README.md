@@ -63,7 +63,7 @@ fetch(url)
 #### Challeneges
 CSS and thinking of how to design the app
 
-## The Making of Higher or Lower
+## The Making of Chuck Norris Facts
 [chuck norris api](http://www.icndb.com/api/)
 
 ## Opportunities for Future Growth
