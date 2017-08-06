@@ -1,12 +1,17 @@
-body{
-  background-image: url('../images/chuck.png');
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  position: relative;
   z-index: -10;
-  background-attachment: fixed
+  background: url('../images/chuck.png') no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 
 body, button{
