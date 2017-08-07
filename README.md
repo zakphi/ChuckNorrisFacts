@@ -69,3 +69,22 @@ CSS and thinking of how to design the app
 ## Opportunities for Future Growth
 
 I am satisfied with what I built. One future feature I'd like to add is the ability for users to share their favorite fact.
+
+## How to download app and run it on localhost
+clone repo
+
+`git clone https://github.com/zakphi/ChuckNorrisFacts.git`
+
+cd into cloned folder
+
+`cd ChuckNorrisFacts`
+
+install the dependencies
+
+`npm install`
+
+start the app
+
+`node app.js`
+
+go to [http://localhost:3000](http://localhost:3000) in your preferred browser
