@@ -1,5 +1,7 @@
 # Chuck Norris Facts
 
+[link to app](https://chucknorrisfacts.herokuapp.com)
+
 ![homescreen](assets/homescreen.png)
 ![homescreen with fact](assets/homescreen_with_fact.png)
 ![homescreen with fact while user logged in](assets/homescreen_with_fact_while_user_logged_in.png)
